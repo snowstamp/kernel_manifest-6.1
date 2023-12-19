@@ -6,10 +6,14 @@
   <remote  name="grapheneos"
     fetch="https://github.com/GrapheneOS/"
     revision="refs/heads/14" />
+  <remote name="snowstamp"
+    fetch="https://github.com/snowstamp/"
+    revision="refs/heads/14-shusky" />
+  
   <default revision="refs/tags/android-14.0.0_r0.26"
     remote="aosp" sync-j="4" />
 
-  <project path="aosp" name="kernel_common-5.15" groups="partner" remote="grapheneos" />
+  <project path="aosp" name="kernel_common-6.1" groups="partner" remote="snowstamp" />
   <project path="private/google-modules/soc/gs" name="kernel/google-modules/soc/gs" groups="partner" >
     <linkfile dest="WORKSPACE" src="bazel.WORKSPACE"/>
     <linkfile dest="device.bazelrc" src="device.bazelrc"/>
